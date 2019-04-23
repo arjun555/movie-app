@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    display: block;
+}
+
+header h1{
+    text-align: center;
+}
+
+h2 .year{
+    font-size: 0.7em;
+}
+
+h4 span{
+    font-weight: normal
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 5px;
+    padding: 0;
+}
+
+.search{
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+form{
+    display: flex;
+    flex-direction: column; 
+}
+
+form button{
+    background-color: lightgray;
+    border: none;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+form input{
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    font-size: 1em;
+}
+
+img{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.title h2{
+    margin-top: 0;
+}
+
+.subtitle{
+    font-size: 0.9em;
+}
+
+@media (min-width: 400px){
+    html{
+        display: flex;
+        justify-content: center;
+    }
+}

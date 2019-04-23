@@ -7,13 +7,25 @@
     <title></title>
 </head>
 <body>
-<h1><%= @title %> <span class="year">(<%= @year %>)</span></h1>
-<img src='<%= @poster %>'>
-<p><%= @plot %></p>
-<h4>Director: <%= @director %></h4>
-<h4>Staring: <%= @actors %> </h4>
-<h4></h4>
-    <p><%= @result %></p>
+    <div class="container">
+        <div class="title">
+            <h2><%=@title%> <span class="year">(<%=@year%>)</span></h2>
+        </div>
+        
+        <div class="subtitle">
+            <%=@rated%> | <%=@runtime%> | <%=@genre%>
+        </div>
 
+        <div>
+            <img src='<%=@poster%>'>
+        </div>
+
+        <div>
+            <p><%= @plot %></p>
+            <h4>Director: <span><%=@director%></span></h4>
+            <h4>Staring: <span><%=@actors%></span></h4>
+        </div>
+    </div>
 </body>
 </html>
+

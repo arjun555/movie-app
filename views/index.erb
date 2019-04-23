@@ -7,15 +7,13 @@
     <title>Index</title>
 </head>
 <body>
-    <header> 
-        <h2>Search</h2> 
-    </header>
     <main>
-        <form action="/movie">
-            <input type="text" name="title">
-            <button>search</button>
-        </form>
-        <%=@result%>
+        <div class="search">       
+            <form action="/movie">
+                <input type="text" name="title" placeholder="Search movies and TV shows..">
+            </form>
+            <%=@result%>
+        </div>
     </main>
 </body>
 </html>
