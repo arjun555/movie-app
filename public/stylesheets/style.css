@@ -86,9 +86,41 @@ img{
     font-size: 0.9em;
 }
 
-@media (min-width: 400px){
-    html{
+.details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.results{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.results div{
+    width: 40%;
+    margin: 5px;
+}
+
+
+@media (min-width: 600px){
+    .details{
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+    }
+    
+    .poster{
+        width: 30%;
+        margin-right: 10px;
+    }
+    
+    .plot{
+        width: 70%;
+    }
+
+    .results div{
+        width: 25%;
     }
 }

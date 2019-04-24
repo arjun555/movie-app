@@ -11,7 +11,15 @@
   <header class="header-main">
     <h1> <a href="/">MOVIES</a> </h1>
   </header>
-  <%= yield  %>
+  <main>
+    <div class="search">       
+      <form action="/search">
+          <input type="text" name="query" placeholder="Search movies and TV shows..">
+      </form>
+    </div>
+    <%= yield  %>
+  </main>
   <footer></footer>
+  <script src="/javascripts/application.js"></script>
 </body>
 </html>

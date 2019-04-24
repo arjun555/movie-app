@@ -10,22 +10,18 @@ end
 
 get '/movie' do
   movie = params[:title];
-  # @result = HTTParty.get('http://omdbapi.com/?apikey=2f6435d9&t=jaws')
+  puts "movie = #{movie}"
+  # @movie_data = HTTParty.get('http://omdbapi.com/?apikey=2f6435d9&t=Jaws')
   @movie_data = HTTParty.get('http://omdbapi.com/?apikey=2f6435d9&t='+ movie)
-  # @result = movie_data
-  # @title = movie_data["Title"]
-  # @year = movie_data["Year"]
-  # @rated = movie_data["Rated"]
-  # @runtime = movie_data["Runtime"]
-  # @genre = movie_data["Genre"]
-  # @poster = movie_data["Poster"]
-  # @plot = movie_data["Plot"]
-  # @director = movie_data["Director"]
-  # @actors = movie_data["Actors"]
-
-  erb :movies
+  # @movie_data = HTTParty.get('http://omdbapi.com/?apikey=2f6435d9&plot=full&s='+ movie)
+  erb :movie
 end
 
+get '/search' do
+  title_query = params[:query]
+  @search_results = HTTParty.get('http://omdbapi.com/?apikey=2f6435d9&s='+ title_query)
+  erb :search_results
+end
 
 
 
