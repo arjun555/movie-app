@@ -1,13 +1,24 @@
 *{
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 html{
     display: block;
 }
 
+header{
+    background-color: #ffbf00;
+}
+
 header h1{
     text-align: center;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #d3d3d338;
 }
 
 h2 .year{
@@ -23,25 +34,18 @@ a{
     color: black;
 }
 
+p{
+    text-align: justify;
+}
+
 a:visited{
     color: black;
 }
 
-p{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 5px;
-    padding: 0;
-}
-
 .search{
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 form{
@@ -52,34 +56,38 @@ form{
 form button{
     background-color: lightgray;
     border: none;
-    margin-top: 2px;
-    margin-bottom: 4px;
+    padding-top: 2px;
+    padding-bottom: 4px;
 }
 
 form input{
+    background-color: #00000000;
     border-bottom: 1px solid black;
     border-top: none;
     border-right: none;
     border-left: none;
-    margin-top: 2px;
-    margin-bottom: 4px;
+    padding-top: 2px;
+    padding-bottom: 4px;
     font-size: 1em;
 }
 
 img{
-    margin-top: 4px;
-    margin-bottom: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     width: 100%;
 }
 
 .container{
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
 }
 
 
 .title h2{
-    margin-top: 0;
+    padding-top: 0;
 }
 
 .subtitle{
@@ -89,19 +97,25 @@ img{
 .details{
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
 .results{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
 }
 
 .results div{
-    width: 40%;
-    margin: 5px;
+    width: 45%;
+}
+
+.results h4{
+    width: 100%;
 }
 
 
@@ -113,14 +127,32 @@ img{
     
     .poster{
         width: 30%;
-        margin-right: 10px;
+        padding-right: 10px;
     }
     
     .plot{
         width: 70%;
     }
 
+    .search{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .container{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .results{
+        justify-content: flex-start;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
     .results div{
-        width: 25%;
+        width: 20%;
+        padding: 5px;
     }
 }
+
