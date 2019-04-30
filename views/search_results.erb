@@ -10,12 +10,10 @@
     <div class="results">
         <% if @search_successful %>
             <h4>Results for "<%=@title_query%>"</h4>
-            <% @search_results["Search"].each do |movie| %>
-                <%if movie["Type"] == "movie"%>
-                    <div>
-                        <a href="/movie?title=<%=movie["Title"]%>"><img src="<%=movie["Poster"]%>" alt=""></a>
-                    </div>
-                <%end%>
+            <% @movie_results.each do |movie| %>
+                <div>
+                    <a href="/movie?title=<%=movie["Title"]%>"><img src="<%=movie["Poster"]%>" alt=""></a>
+                </div>
             <% end %>
         <% else %>
             <div>
