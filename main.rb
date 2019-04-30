@@ -39,13 +39,12 @@ def add_movie_cache
   movie.imdb_id = @movie_data["imdbID"]
   movie.title = @movie_data["Title"]
   movie.release_year = @movie_data["Year"]
-  # movie.type = @movie_data["Type"]
   movie.poster = @movie_data["Poster"]
   movie.save
 end
 
 def is_movie_cached
-  movies = Movie.where(title: @title_movie)
+  movies = Movie.where('lower(title) = ?', @title_movie.downcase)
   if movies.length > 0 
     return true
   else
